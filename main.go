@@ -26,7 +26,7 @@ func main() {
 	r.Use(middleware.Logger)
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		_, err := w.Write([]byte(fmt.Sprintf("grasshopper disassemble? %s is alive, no disassemble!", name())))
+		_, err := w.Write([]byte(fmt.Sprintf("1: grasshopper disassemble? %s is alive, no disassemble!", name())))
 		if err != nil {
 			logrus.Fatalf("unable to write to buffer %v", err)
 		}
