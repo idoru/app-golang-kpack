@@ -26,7 +26,7 @@ func main() {
 	r.Use(middleware.Logger)
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		_, err := w.Write([]byte(fmt.Sprintf("%s is alive", name())))
+		_, err := w.Write([]byte(fmt.Sprintf("%s is alive, no disassemble!", name())))
 		if err != nil {
 			logrus.Fatalf("unable to write to buffer %v", err)
 		}
